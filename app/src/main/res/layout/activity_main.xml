@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_show_params"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Hello World!"
+        android:textSize="@dimen/sp_25"/>
+
+    <Button
+        android:layout_width="@dimen/dp_360"
+        android:layout_height="@dimen/dp_50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:onClick="getScreenParams"
+        android:text="测试此按钮的适配"
+        android:textSize="@dimen/sp_18"/>
+</RelativeLayout>
