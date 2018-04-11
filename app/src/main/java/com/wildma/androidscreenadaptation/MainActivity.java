@@ -3,11 +3,15 @@ package com.wildma.androidscreenadaptation;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.wildma.androidscreenadaptation.utils.ConvertUtils;
+
 public class MainActivity extends AppCompatActivity {
 
+    private final String TAG = getClass().getSimpleName();
     private TextView mTvShowParams;
 
     @Override
@@ -54,5 +58,32 @@ public class MainActivity extends AppCompatActivity {
         str += "\nheightDP: " + heightDP + "dp";
         str += "\nwidthDP: " + widthDP + "dp";
         return str;
+    }
+
+    /**
+     * 动态设置dp或sp
+     */
+    public void DynamicSet() {
+
+        /**
+         * 注意：
+         * getDimension()方法並不是直接拿到dimens.xml文件中的dp或sp值
+         * 而是將dimens.xml文件中的dp或sp值乘以屏幕密度（density）来换算成px值
+         * 所以拿到该值后还需要换算成对应的dp或sp
+         */
+
+        /*获取sp值*/
+        float pxValue = getResources().getDimension(R.dimen.sp_20);//获取对应资源文件下的sp值
+        int spValue = ConvertUtils.px2sp(this, pxValue);//将px值转换成sp值
+        mTvShowParams.setTextSize(spValue);//设置文字大小
+
+        /*获取dp值*/
+        float pxValue2 = getResources().getDimension(R.dimen.dp_360);//获取对应资源文件下的dp值
+        int dpValue = ConvertUtils.px2dp(this, pxValue);//将px值转换成dp值
+
+        Log.d(TAG, "pxValue= " + pxValue);
+        Log.d(TAG, "spValue= " + spValue);
+        Log.d(TAG, "pxValue2= " + pxValue2);
+        Log.d(TAG, "dpValue= " + dpValue);
     }
 }
