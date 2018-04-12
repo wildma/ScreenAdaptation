@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
         /**
          * 注意：
-         * getDimension()方法並不是直接拿到dimens.xml文件中的dp或sp值
+         * getDimension()方法并不是直接拿到dimens.xml文件中的dp或sp值
          * 而是將dimens.xml文件中的dp或sp值乘以屏幕密度（density）来换算成px值
          * 所以拿到该值后还需要换算成对应的dp或sp
          */

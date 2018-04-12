@@ -12,6 +12,7 @@
         android:text="Hello World!"
         android:textSize="@dimen/sp_25"/>
 
+    <!--若该按钮在设备上能铺满屏幕宽度，说明能适配改设备-->
     <Button
         android:layout_width="@dimen/dp_360"
         android:layout_height="@dimen/dp_50"
