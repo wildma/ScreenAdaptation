@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void getScreenParams(View view) {
         mTvShowParams.setText(getScreenParams());
+        dynamicSet();
     }
 
     /**
@@ -48,6 +49,12 @@ public class MainActivity extends AppCompatActivity {
         float scaledDensity = dm.scaledDensity;
         float heightDP = heightPixels / density;
         float widthDP = widthPixels / density;
+        float smallestWidthDP;
+        if(widthDP < heightDP) {
+            smallestWidthDP = widthDP;
+        }else {
+            smallestWidthDP = heightDP;
+        }
         String str = "heightPixels: " + heightPixels + "px";
         str += "\nwidthPixels: " + widthPixels + "px";
         str += "\nxdpi: " + xdpi + "dpi";
@@ -57,13 +64,14 @@ public class MainActivity extends AppCompatActivity {
         str += "\nscaledDensity: " + scaledDensity;
         str += "\nheightDP: " + heightDP + "dp";
         str += "\nwidthDP: " + widthDP + "dp";
+        str += "\nsmallestWidthDP: " + smallestWidthDP + "dp";
         return str;
     }
 
     /**
      * 动态设置dp或sp
      */
-    public void DynamicSet() {
+    public void dynamicSet() {
 
         /**
          * 注意：
@@ -79,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
         /*获取dp值*/
         float pxValue2 = getResources().getDimension(R.dimen.dp_360);//获取对应资源文件下的dp值
-        int dpValue = ConvertUtils.px2dp(this, pxValue);//将px值转换成dp值
+        int dpValue = ConvertUtils.px2dp(this, pxValue2);//将px值转换成dp值
 
         Log.d(TAG, "pxValue= " + pxValue);
         Log.d(TAG, "spValue= " + spValue);
