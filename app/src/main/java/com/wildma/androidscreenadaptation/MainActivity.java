@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.wildma.androidscreenadaptation.utils.ConvertUtils;
+import com.wildma.androidscreenadaptation.utils.ScreenUtils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,10 +39,9 @@ public class MainActivity extends AppCompatActivity {
      */
     public String getScreenParams() {
         DisplayMetrics dm = new DisplayMetrics();
-        //        dm = getResources().getDisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
-        int heightPixels = dm.heightPixels;
-        int widthPixels = dm.widthPixels;
+        int heightPixels = ScreenUtils.getScreenHeight(this);
+        int widthPixels = ScreenUtils.getScreenWidth(this);
         float xdpi = dm.xdpi;
         float ydpi = dm.ydpi;
         int densityDpi = dm.densityDpi;
