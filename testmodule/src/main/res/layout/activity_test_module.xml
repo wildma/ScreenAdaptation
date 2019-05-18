@@ -15,32 +15,6 @@
         android:text="=== screen params ==="
         android:textSize="@dimen/sp_25"/>
 
-    <Button
-        android:id="@+id/btn_test_module"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
-        android:background="@color/colorPrimary"
-        android:gravity="center"
-        android:onClick="testModule"
-        android:text="test module"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/sp_18"/>
-
-    <Button
-        android:id="@+id/btn_dynamic_set"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
-        android:background="@color/colorPrimary"
-        android:gravity="center"
-        android:onClick="dynamicSet"
-        android:text="dynamic set"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/sp_18"/>
-
     <!--若该按钮在设备上能铺满屏幕宽度，说明能适配该设备-->
     <Button
         android:id="@+id/btn_button"
