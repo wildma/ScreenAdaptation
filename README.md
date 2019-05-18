@@ -3,7 +3,7 @@
 ### 优点
 
 - 使用简单  
-利用插件生成对应的 dimens.xml 文件，设计图标注多少 dp，布局中就写多少dp，格式为@dimen/dp_XX，sp 同理。
+利用插件生成对应的 dimens.xml 文件，设计图标注多少 dp，布局中就写多少 dp，格式为 @dimen/dp_XX，sp 同理。
 
 - 稳定性好  
 smallestWidth 限定符适配方案很早就出现了，经过大量用户的验证，市面上的主流设备几乎都能精准适配。
@@ -40,7 +40,7 @@ smallestWidth 限定符适配寻找 dimens.xml 文件的原理是从大往小找
 
 
 ### 使用
-详细介绍请看文章：[推荐一种非常好用的Android屏幕适配](https://www.jianshu.com/p/1302ad5a4b04)
+详细介绍请看文章：[一种非常好用的 Android 屏幕适配](https://www.jianshu.com/p/1302ad5a4b04)
 
 
-ps：如果对你有帮助，点下star就是对我最大的认可。
+ps：如果对你有帮助，点下 star 就是对我最大的认可。
