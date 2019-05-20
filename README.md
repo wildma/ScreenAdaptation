@@ -34,9 +34,17 @@ smallestWidth 限定符适配寻找 dimens.xml 文件的原理是从大往小找
 
 ![Nexus 4](https://github.com/wildma/ScreenAdaptation/blob/master/screenshots/Nexus%204.jpg)
 
+**Pixel 3（392.7272 dp）：**  
+
+![Pixel 3](https://github.com/wildma/ScreenAdaptation/blob/master/screenshots/Pixel%203.png)
+
 **Pixel XL（411.4285 dp）：**  
 
 ![Pixel XL](https://github.com/wildma/ScreenAdaptation/blob/master/screenshots/Pixel%20XL.jpg)
+
+**Pixel 3 XL（411.4285 dp）：**  
+
+![Pixel 3 XL](https://github.com/wildma/ScreenAdaptation/blob/master/screenshots/Pixel%203%20XL.png)
 
 
 ### 使用
