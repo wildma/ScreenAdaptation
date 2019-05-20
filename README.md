@@ -22,6 +22,8 @@ smallestWidth 限定符适配寻找 dimens.xml 文件的原理是从大往小找
 
 
 ### 适配效果图
+如下，将按钮的宽度设置为 @dimen/dp_360，运行在不同（最小宽度不同）的设备上都是可以铺满屏幕宽度的，说明适配成功！
+
 **Nexus S（320 dp）：**  
 
 ![Nexus S](https://github.com/wildma/ScreenAdaptation/blob/master/screenshots/Nexus%20S.jpg)
