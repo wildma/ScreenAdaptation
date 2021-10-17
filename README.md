@@ -1,7 +1,14 @@
 # 一种非常好用的 Android 屏幕适配——smallestWidth 限定符适配
 
-### 优点
+## 使用
+1. 获取设计图最小宽度（单位为 dp）。
+2. 以设计图最小宽度作为基准值，生成所有设备对应的 dimens.xml 文件。  
+如果项目只需要适配手机的话，只需要生成 320、360、362.2641、384、392.7272、400、410、411.4285、432、480 对应的 dimens.xml 文件即可。
+3. 根据设计图标注，标注多少 dp，布局中就写多少 dp，格式为 @dimen/dp_XX。
 
+详细介绍请看文章：[一种非常好用的 Android 屏幕适配](https://www.jianshu.com/p/1302ad5a4b04)
+
+## 优点
 - 使用简单  
 利用插件生成对应的 dimens.xml 文件，设计图标注多少 dp，布局中就写多少 dp，格式为 @dimen/dp_XX，sp 同理。
 
@@ -21,7 +28,7 @@ smallestWidth 限定符适配寻找 dimens.xml 文件的原理是从大往小找
 该套适配方案采用的单位是 dp 和 sp，dp 和 sp 是 google 推荐使用的计量单位，即使以后不用该套适配方案，任然不影响现有的界面。
 
 
-### 适配效果图
+## 适配效果图
 如下，将按钮的宽度设置为 @dimen/dp_360，运行在不同（最小宽度不同）的设备上都是可以铺满屏幕宽度的，说明适配成功！
 
 **Nexus S（320 dp）：**  
@@ -47,10 +54,6 @@ smallestWidth 限定符适配寻找 dimens.xml 文件的原理是从大往小找
 **Pixel 3 XL（411.4285 dp）：**  
 
 ![Pixel 3 XL](https://github.com/wildma/ScreenAdaptation/blob/master/screenshots/Pixel%203%20XL.png)
-
-
-### 使用
-详细介绍请看文章：[一种非常好用的 Android 屏幕适配](https://www.jianshu.com/p/1302ad5a4b04)
 
 
 ps：如果对你有帮助，点下 star 就是对我最大的认可。
